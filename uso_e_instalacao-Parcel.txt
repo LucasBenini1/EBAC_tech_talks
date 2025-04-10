@@ -1,0 +1,56 @@
+1 - 
+
+npm init
+
+2-
+
+npm install --save-dev parcel
+
+A organizacao das pastas eh a mesma, cria a src com styles e scripts e tal. Notei que foi colocado o index.html dentro
+da src. Porem ao rodar, ele compilará tambem este arquivo HTML e sera passado para a dist.
+
+
+3-
+
+scripts:
+
+    "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+
+    Colocou todos os arquivos a serem compilados dentro de src. Ao rodar, 
+    ele ira criar automaticamente a pasta dist com as suas determinadas pastas e arquivos.
+
+4-
+
+No package, eu removi o main: index.js
+Ele estava causando erro. Verificar se isto ira dar problema (Nao deu).
+
+
+5-
+
+Config para localizar as imagens e fazer a compressao delas:
+
+Cria o arquivo sharp.config.json -> fora das pastas, aonde esta o package.
+
+
+
+NOTA IMPORTANTES:
+
+ Nao utilizaremos o live server, pois o parcel ja nos fornece um servidor.
+ Ao modificar o codigo o navegador ja atualiza. 
+ ABRIREMOS O PROJETO NO LINK FORNECIDO NO TERMINAL:
+ Server running at http://localhost:1234
+
+
+As atualizacoes nos arquivos sao feitas nos arquivos do src. Entao, serao compilados.
+Normalmente igual os outros automadores.
+
+MUITO CUIDADO AO DAR CTRL C NO TERMINAL (NO LINK), ELE IRA PARA O SERVIDOR.
+
+O PARCEL TRABALHA SOB DEMANDA, ELE SO IRA COMPRIMIR IMAGENS QUE ESTAO CITADAS NO HTML. 
+Mesmo que haja uma pasta de imgs com varias imagens, se nao estiverem no doc HTML, nao serao
+comprimidas.
+
+Nao precisa baixar plugins, ele instala automaticamente.
+
+Para o uso do SASS, apenas linka o HTML do src no arquivo scss e so utilizar.
+
