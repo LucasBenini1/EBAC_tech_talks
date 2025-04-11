@@ -54,3 +54,6 @@ Nao precisa baixar plugins, ele instala automaticamente.
 
 Para o uso do SASS, apenas linka o HTML do src no arquivo scss e so utilizar.
 
+DESABILITEI O AUTO SAVE DO VSCODE PARA QUE PARE DE DAR ERRO.
+
+
